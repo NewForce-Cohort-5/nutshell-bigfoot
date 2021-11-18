@@ -1,4 +1,6 @@
+import { deleteNews } from "./NewsDataProvider.js"
 import { NewsEditForm } from "./NewsEditForm.js"
+import { newsList } from "./NewsList.js"
 
 let unixTimestamp = +new Date().getTime()
 export let timestamp = new Date(unixTimestamp * 1000)
@@ -26,6 +28,18 @@ export const News = (newsObject) => {
 }
 
 
+const eventDeleteHub = document.querySelector("body")
+
+eventDeleteHub.addEventListener("click", (eventObject) => {
+  if (eventObject.target.id.startsWith("deleteNote")) {
+    const idToDelete = eventObject.target.id.split("--")[1]
+    console.log(idToDelete)
+    deleteNews(idToDelete)
+    .then(newsList)
+    
+} 
+ 
+});
 //How do I get the Time stamp? Need a sepeatate prarameter for time?
 //How do I get it to print use name? Do I need to? <div id="newsUserId">User: ${newsObject.userId}</div>
 //does hyperlink work?  <div id="newsUrl" href="${newsObject.url}">News Article URL: ${newsObject.url} </div>
