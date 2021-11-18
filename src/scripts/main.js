@@ -4,7 +4,12 @@ import { eventForm } from "./Events/EventForm.js"
 import { postEvent } from "./Events/EventList.js"
 import { Nutshell } from "./Nutshell.js"
 
+const darkModeButton = document.querySelector("#darkMode")
 
+darkModeButton.addEventListener("click", function() {
+    const bodyElement = document.querySelector("body")
+    bodyElement.classList.toggle("dark-background")
+})
 /*
     1. Check if the user is authenticated by looking in session storage for `activeUser`
     2. If so, render the Nutshell component

@@ -2,14 +2,14 @@ import { deleteEvent } from "./EventDataProvider.js"
 import { eventEditor } from "./EventEditForm.js"
 import { postEvent } from "./EventList.js"
 
-export const Event = (events) => {
+export const Event = (event) => {
     return `
     <div id="eventCard">
-        ${events.event}<br>
-        ${events.date}<br>
-        ${events.location}
-        <button class="eventEdit" id-"editEvent--${events.id}">Edit</button>
-        <button class="eventDel" id-"deleteEvent--${events.id}">Delete</button>
+        ${event.event}<br>
+        ${event.date}<br>
+        ${event.location}<br>
+        <button class="eventEdit" id="editEvent--${event.id}">Edit</button>
+        <button class="eventDel" id="deleteEvent--${event.id}">Delete</button>
     `
 }
 
