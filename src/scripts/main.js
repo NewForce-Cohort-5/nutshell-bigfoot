@@ -3,6 +3,7 @@ import { RegisterForm } from "./auth/RegisterForm.js"
 import { newsForm } from "./news/NewsForm.js"
 import { newsList } from "./news/NewsList.js"
 import { Nutshell } from "./Nutshell.js"
+import { NewsEditForm } from "./news/NewsEditForm.js"
 
 
 /*
@@ -25,3 +26,4 @@ if(!activeUser){
 
 newsList()
 newsForm()
+// NewsEditForm()

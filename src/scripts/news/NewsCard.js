@@ -1,6 +1,7 @@
+import { NewsEditForm } from "./NewsEditForm.js"
 
 let unixTimestamp = +new Date().getTime()
-let timestamp = new Date(unixTimestamp * 1000)
+export let timestamp = new Date(unixTimestamp * 1000)
 
 console.log(timestamp)
 
@@ -14,8 +15,7 @@ export const News = (newsObject) => {
     <div id="newsSynopsis"><strong>Synopsis: </strong> ${newsObject.synopsis} </div>
 
     <div id="newsId"><strong>Article Id:</strong> ${newsObject.id}</div>
-    <div id="newsTime"><strong>Posted:</strong> ${new Date(newsObject.dateTime).toLocaleDateString('en-US')}</div>
-    
+       
     <button id="deleteNote--${newsObject.id}">Delete</button>
     <button id="edit--${newsObject.id}">Edit</button>
 </section>
@@ -31,3 +31,13 @@ export const News = (newsObject) => {
 //does hyperlink work?  <div id="newsUrl" href="${newsObject.url}">News Article URL: ${newsObject.url} </div>
 
 // Will need to add Edit and Delete event Listener
+
+/* <div id="newsTime"><strong>Posted:</strong> ${new Date(newsObject.dateTime).toLocaleDateString('en-US')}</div> */
+
+const eventHub = document.querySelector("body")
+eventHub.addEventListener("click", (eventObject) => {
+    if(eventObject.target.id.startsWith("edit--")){
+    const newsId = +eventObject.target.id.split("--")[1]
+    NewsEditForm(newsId);
+    }
+})

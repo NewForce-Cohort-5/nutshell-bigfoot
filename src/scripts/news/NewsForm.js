@@ -5,6 +5,7 @@ const contentTarget = document.querySelector("#newsFormContainer")
 
 document.querySelector("body").addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveNews"){
+      
 
         const newArticle = {
 
@@ -22,6 +23,7 @@ document.querySelector("body").addEventListener("click", clickEvent => {
         saveNews(newArticle)
         .then(newsList)
     }
+    
 })
 
 
@@ -34,8 +36,15 @@ export const newsForm = () => {
     <fieldset>Article Title: <input type="text" id="title" placeholder="Input Article Title Here"></fieldset>
     <fieldset>Article Synopsis: <input type="text" id="synopsis" placeholder="Input Synopsis Here"></fieldset> 
     <fieldset>URL for Site: <input type="url" id="newsUrl" placeholder="Article URL here"></fieldset> 
-
+    
 </article>
         <button id="saveNews">Add Article</button>`
 }
 
+
+
+// function getTime(clickEvent) {
+//     var time = document.getElementById("time");
+//     time.firstChild.nodeValue = clickEvent.timeStamp;
+//   }
+//   document.body.addEventListener("keypress", getTime);
