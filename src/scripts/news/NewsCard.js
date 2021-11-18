@@ -1,8 +1,8 @@
 
-// let unixTimestamp = +new Date().getTime()
-// let timestamp = new Date(unixTimestamp * 1000)
+let unixTimestamp = +new Date().getTime()
+let timestamp = new Date(unixTimestamp * 1000)
 
-// console.log(timestamp)
+console.log(timestamp)
 
 
 export const News = (newsObject) => {
@@ -14,7 +14,7 @@ export const News = (newsObject) => {
     <div id="newsSynopsis"><strong>Synopsis: </strong> ${newsObject.synopsis} </div>
 
     <div id="newsId"><strong>Article Id:</strong> ${newsObject.id}</div>
-    <div id="newsTime"><strong>Posted:</strong> ${new Date(newsObject.date).toLocaleDateString('en-US')}</div>
+    <div id="newsTime"><strong>Posted:</strong> ${new Date(newsObject.dateTime).toLocaleDateString('en-US')}</div>
     
     <button id="deleteNote--${newsObject.id}">Delete</button>
     <button id="edit--${newsObject.id}">Edit</button>
