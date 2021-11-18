@@ -1,6 +1,8 @@
 import { LoginForm } from "./auth/LoginForm.js"
 import { RegisterForm } from "./auth/RegisterForm.js"
 import { Nutshell } from "./Nutshell.js"
+import { taskForm } from "./task/TaskForm.js"
+import { taskList } from "./task/TaskList.js"
 
 
 /*
@@ -11,6 +13,8 @@ import { Nutshell } from "./Nutshell.js"
         ensure that the Nutshell component gets rendered
 */
 
+taskList()
+taskForm()
 
 const activeUser = sessionStorage.getItem("activeUser")
 
