@@ -1,5 +1,7 @@
 import { LoginForm } from "./auth/LoginForm.js"
 import { RegisterForm } from "./auth/RegisterForm.js"
+import { eventForm } from "./Events/EventForm.js"
+import { postEvent } from "./Events/EventList.js"
 import { Nutshell } from "./Nutshell.js"
 
 
@@ -20,3 +22,7 @@ if(!activeUser){
 } else {
     Nutshell()
 }
+
+eventForm()
+
+
