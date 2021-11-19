@@ -19,8 +19,8 @@ document.querySelector("body").addEventListener("click", clickEvent => {
         }
         console.log(newArticle)
        
-        document.querySelector("#newsTitle").value ="",
-        document.querySelector("#newsSynopsis").value ="",
+        document.querySelector("#title").value ="",
+        document.querySelector("#synopsis").value ="",
         document.querySelector("#newsUrl").value =""
             // ^^ resets form to empty string
         saveNews(newArticle)

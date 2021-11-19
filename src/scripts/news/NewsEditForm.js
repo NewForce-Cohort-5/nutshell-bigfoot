@@ -3,7 +3,7 @@ import { useNews, updateNews } from "./NewsDataProvider.js";
 import { newsList } from "./NewsList.js";
 import { newsForm } from "./NewsForm.js";
 
-const contentTarget = document.querySelector("body")
+const contentTarget = document.querySelector("#newsEditContainer")
 
 export const NewsEditForm = (articleId) => {
     // Give this component access to our application's notes state
@@ -33,14 +33,18 @@ contentTarget.addEventListener("click", (event) => {
             id: +event.target.id.split("--")[1], // how can you get the note's id?
             title: document.querySelector("#newsEditArticle").value, 
             synopsis: document.querySelector("#newsEditSynopsis").value,  
-            url: document.querySelector("#newsEditUrl").value
+            url: document.querySelector("#newsEditUrl").value,
+            // dateNow: Date.now()  - use hidden div above - look for example code.
         
         } // these ids come from the form for where we edit the note so it can save it
             console.log(editedArticle)
         // Send to json-server and refresh the list
+         
+          //
+        
         updateNews(editedArticle)//this updates the edited note
         .then(newsList)//This redisplays the updated list 
-        // .then(newsForm)//this redisplays the form
+        .then(newsForm)//this redisplays the form
 
     }
 })

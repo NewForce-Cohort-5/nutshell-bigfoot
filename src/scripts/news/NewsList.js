@@ -14,7 +14,7 @@ export const newsList = () => {
        
  //sort the array before you print 
   const sortedNews = allTheNews.sort((a, b) => b.dateNow - a.dateNow)
-  console.log(sortedNews)
+//   console.log(sortedNews)
 
         allTheNews.forEach((singleArticle)=>{
           newsHTML += News(singleArticle)
