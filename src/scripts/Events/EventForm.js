@@ -4,6 +4,7 @@ import { saveEvent } from "./EventDataProvider.js"
 
 const contentTarget = document.querySelector(".dashboard")
 
+// This is the form for entering in a new Event:
 export const eventForm = () => {
     contentTarget.innerHTML = `
     <section class="eventForm" id="eventSection">
@@ -23,13 +24,14 @@ export const eventForm = () => {
         <button id="saveEvent">Save</button>
     `
 }
-
+// This is the Save button for New Events:
 contentTarget.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveEvent") {
         const eventName = document.querySelector("#eventNameField")
         const eventDate = document.querySelector("#eventDateField")
         const eventLocation = document.querySelector("#eventLocationField")
 
+// This saves new events to the JSON:
     const newEvent = {
         event: eventName.value,
         date: eventDate.value,

@@ -1,10 +1,12 @@
 import { useEvents, modifyEvent } from "./EventDataProvider.js"
 import { postEvent } from "./EventList.js"
 
+// This function permits editing Events:
 export const eventEditor = (eventId) => {
     const contentTarget = document.querySelector(`#eventEdit--${eventId}`)
     const allEvents = useEvents()
-    
+
+// This function produces edit fields for the selected chunk of array data to edit:
     const eventToEdit = allEvents.find(singleEvent => singleEvent.id === eventId)
     contentTarget.innerHTML = `
         <section id="editingEvent"
@@ -15,10 +17,11 @@ export const eventEditor = (eventId) => {
                 <button id="saveEditEvent--${eventId}">Save Changes</button>
         </section>
     `
-
 }
+
 const editTarget = document.querySelector("body")
 
+//This button saves edits to the selected Event:
 editTarget.addEventListener("click", (event) => {
     if (event.target.id.startsWith("saveEditEvent")) {
         const editedEvent = {
@@ -27,9 +30,6 @@ editTarget.addEventListener("click", (event) => {
             date: document.querySelector("#editingEventDate").value,           
             location: document.querySelector("#editingEventLocation").value
         }
-        console.log(document.querySelector("#editingEventLocation").value)
-        console.log(document.querySelector("#editingEventDate").value)
-        console.log(document.querySelector("#editingEventName").value)
         modifyEvent(editedEvent)
         .then(postEvent)
     }
