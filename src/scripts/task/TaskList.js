@@ -3,7 +3,7 @@ import { task } from "./TaskCard.js";
 import { taskForm } from "./TaskForm.js";
 
 const contentTarget = document.querySelector("#taskContainer")
-
+debugger
 export const taskList = () => {
     getTasks()
     .then(() => {
@@ -27,5 +27,6 @@ export const taskList = () => {
         
      }) 
 }
-    
+
+
  

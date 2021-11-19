@@ -9,20 +9,25 @@ import { taskList } from "./TaskList.js";
 
 const contentTarget = document.querySelector("#taskFormContainer")
 
+
+
 document.querySelector("body").addEventListener("click",clickEvent =>{
     if (clickEvent.target.id === "saveTask") {
 
+    let userId = sessionStorage.getItem('activeUser')
+
+        console.log(userId)
         const newTask = {
             task: document.querySelector("#task-text").value,
             completionDate: document.querySelector("#completion-date").value,
-            userId: document.querySelector("#user-Id").value,
+            userId: parseInt(userId),
            
         }
 
         console.log(newTask)
         document.querySelector("#task-text").value = "",
         document.querySelector("#completion-date").value = "",
-        document.querySelector("#user-Id").value = ""
+        
 
         saveTask(newTask)
         .then(taskList)
@@ -32,9 +37,7 @@ document.querySelector("body").addEventListener("click",clickEvent =>{
 export const taskForm = () => {
    contentTarget.innerHTML = `
     <section> 
-    <fieldset>Task: <input type="textarea" id="task-text" placeholder="task goes here"> </fieldset>
-    <fieldset>Task completion date: <input type="date" id="completion-date"> </fieldset>
-    <button id="saveTask">Save Note</button>
-    </section>`
-    
+    <fieldset>Task: <input type="textarea" id="task-text" placeholder="task goes here"> <br>
+    Task completion date: <input type="date" id="completion-date"> 
+    <button id="saveTask">Save Note</button> </fieldset>`
 }
