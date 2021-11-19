@@ -9,7 +9,7 @@ export const eventForm = () => {
     <section class="eventForm" id="eventSection">
     <h2>Enter an Event Here</h2>
         <div id="eventName">
-            <label for="eventName">Event Name:</label>
+            <label for="eventName">Event:</label>
             <input type="text" id="eventNameField">
         </div>
         <div id="eventDate">

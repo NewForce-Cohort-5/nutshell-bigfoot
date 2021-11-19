@@ -8,7 +8,7 @@ export const Event = (event) => {
         ${event.event}<br>
         ${event.date}<br>
         ${event.location}<br>
-        <button class="eventEdit" id="editEvent--${event.id}">Edit</button>
+        <button class="eventEdit" id="eventEdit--${event.id}">Edit</button>
         <button class="eventDel" id="deleteEvent--${event.id}">Delete</button>
     `
 }
@@ -24,7 +24,7 @@ editDelete.addEventListener("click", (eventObject) => {
 })
 
 editDelete.addEventListener("click", (eventObject) => {
-    if (eventObject.target.id.startsWith("editEvent")) {
+    if (eventObject.target.id.startsWith("eventEdit")) {
         const eventId = +eventObject.target.id.split("--")[1]
         eventEditor(eventId)
     }

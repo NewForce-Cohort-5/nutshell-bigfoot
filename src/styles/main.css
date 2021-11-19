@@ -2,3 +2,55 @@
     background-color: darkslategrey;
     color: lightskyblue;
 }
+/* Event CSS */
+/* Event Card */
+#eventCard {
+    border: 1px solid lime;
+}
+#eventEdit-- {
+    border: 1px solid lime;
+}
+#deleteEvent-- {
+    border: 1px solid lime;
+}
+/* New Event Form */
+#eventSection {
+    border: 1px solid lime;
+}
+#eventName {
+    border: 1px solid lime;
+}
+#eventDate {
+    border: 1px solid lime;
+}
+#eventLocation {
+    border: 1px solid lime;
+}
+#eventNameField {
+    border: 1px solid lime;
+}
+#eventDateField {
+    border: 1px solid lime;
+}
+#eventLocationField {
+    border: 1px solid lime;
+}
+#saveEvent {
+    border: 1px solid lime;
+}
+/* Event Editor */
+#editingEvent {
+    border: 1px solid lime;
+}
+#editingEventName {
+    border: 1px solid lime;
+}
+#editingEventDate {
+    border: 1px solid lime;
+}
+#editingEventLocation {
+    border: 1px solid lime;
+}
+#saveEditEvent {
+    border: 1px solid lime;
+}
