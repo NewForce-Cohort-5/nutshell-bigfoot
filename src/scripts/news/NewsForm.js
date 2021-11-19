@@ -5,14 +5,17 @@ const contentTarget = document.querySelector("#newsFormContainer")
 
 document.querySelector("body").addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveNews"){
+ 
       
 
         const newArticle = {
 
             title: document.querySelector("#title").value,
             synopsis: document.querySelector("#synopsis").value,
-            url: document.querySelector("#newsUrl").value
-            
+            url: document.querySelector("#newsUrl").value,
+            // newDate: new Date().toLocaleString(),
+            dateNow: Date.now()
+          
         }
         console.log(newArticle)
        
@@ -23,6 +26,8 @@ document.querySelector("body").addEventListener("click", clickEvent => {
         saveNews(newArticle)
         .then(newsList)
     }
+
+
     
 })
 

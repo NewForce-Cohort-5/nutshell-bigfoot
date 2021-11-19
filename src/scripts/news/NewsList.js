@@ -9,7 +9,12 @@ export const newsList = () => {
 
     .then(() => {
         let allTheNews = useNews()
+        
         let newsHTML = "";
+       
+ //sort the array before you print 
+  const sortedNews = allTheNews.sort((a, b) => b.dateNow - a.dateNow)
+  console.log(sortedNews)
 
         allTheNews.forEach((singleArticle)=>{
           newsHTML += News(singleArticle)
@@ -17,3 +22,4 @@ export const newsList = () => {
         contentTarget.innerHTML = `${newsHTML}`
     })
 }
+

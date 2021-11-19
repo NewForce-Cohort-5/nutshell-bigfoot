@@ -47,15 +47,7 @@ export const updateNews = news => {
 
 }
 
-export const times = time => {
 
-    return fetch(`http://localhost:8088/news/${news.timeDate}`, {
-        method: "PUT",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(time)
-    })
 
-}
+
 //need to .split on spaces ? of the data to get what part of time I want

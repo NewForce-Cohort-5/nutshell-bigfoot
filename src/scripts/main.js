@@ -4,6 +4,7 @@ import { newsForm } from "./news/NewsForm.js"
 import { newsList } from "./news/NewsList.js"
 import { Nutshell } from "./Nutshell.js"
 import { NewsEditForm } from "./news/NewsEditForm.js"
+import { getNews } from "./news/NewsDataProvider.js"
 
 
 /*
@@ -26,4 +27,5 @@ if(!activeUser){
 
 newsList()
 newsForm()
+
 // NewsEditForm()

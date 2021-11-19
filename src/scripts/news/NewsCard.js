@@ -2,10 +2,10 @@ import { deleteNews } from "./NewsDataProvider.js"
 import { NewsEditForm } from "./NewsEditForm.js"
 import { newsList } from "./NewsList.js"
 
-let unixTimestamp = +new Date().getTime()
-export let timestamp = new Date(unixTimestamp * 1000)
+// let unixTimestamp = +new Date().getTime()
+// export let timestamp = new Date(unixTimestamp * 1000)
 
-console.log(timestamp)
+// console.log(timestamp)
 
 
 export const News = (newsObject) => {
@@ -16,8 +16,8 @@ export const News = (newsObject) => {
 
     <div id="newsSynopsis"><strong>Synopsis: </strong> ${newsObject.synopsis} </div>
 
-    <div id="newsId"><strong>Article Id:</strong> ${newsObject.id}</div>
-       
+    <div id="newsId"><strong>Article Id:</strong> ${newsObject.id}</div> 
+    
     <button id="deleteNote--${newsObject.id}">Delete</button>
     <button id="edit--${newsObject.id}">Edit</button>
 </section>

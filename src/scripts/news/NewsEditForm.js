@@ -24,6 +24,7 @@ export const NewsEditForm = (articleId) => {
 }
 
 
+
 contentTarget.addEventListener("click", (event) => {
     if(event.target.id.startsWith("saveArticleChanges")){ 
 
@@ -33,6 +34,7 @@ contentTarget.addEventListener("click", (event) => {
             title: document.querySelector("#newsEditArticle").value, 
             synopsis: document.querySelector("#newsEditSynopsis").value,  
             url: document.querySelector("#newsEditUrl").value
+        
         } // these ids come from the form for where we edit the note so it can save it
             console.log(editedArticle)
         // Send to json-server and refresh the list
