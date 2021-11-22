@@ -1,3 +1,5 @@
+//Author: Heaven Burdette and Dataprovide to pull data into and out of database
+
 let news = []
 // empty array for news articles 
 

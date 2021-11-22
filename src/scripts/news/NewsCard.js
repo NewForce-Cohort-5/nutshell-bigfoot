@@ -1,3 +1,5 @@
+//Author: Heaven Burdette and News card to record data in list  and edit and delete button events
+
 import { deleteNews } from "./NewsDataProvider.js"
 import { NewsEditForm } from "./NewsEditForm.js"
 import { newsList } from "./NewsList.js"
@@ -17,7 +19,7 @@ export const News = (newsObject) => {
     <div id="newsSynopsis"><strong>Synopsis: </strong> ${newsObject.synopsis} </div>
 
     <div id="newsId"><strong>Article Id:</strong> ${newsObject.id}</div> 
-    
+
     <button id="deleteNote--${newsObject.id}">Delete</button>
     <button id="edit--${newsObject.id}">Edit</button>
 </section>
@@ -27,6 +29,8 @@ export const News = (newsObject) => {
 
 }
 
+//     <div style="visibility:hidden">${newsObject.dateNow}</div>
+//   <div id="newsUserId>${userID.id}</div>
 
 const eventDeleteHub = document.querySelector("body")
 
@@ -51,7 +55,11 @@ eventDeleteHub.addEventListener("click", (eventObject) => {
 const eventHub = document.querySelector("body")
 eventHub.addEventListener("click", (eventObject) => {
     if(eventObject.target.id.startsWith("edit--")){
+
+     
     const newsId = +eventObject.target.id.split("--")[1]
-    NewsEditForm(newsId);
+    NewsEditForm(newsId); 
+    //do we need 2nd paramater 
+
     }
 })
