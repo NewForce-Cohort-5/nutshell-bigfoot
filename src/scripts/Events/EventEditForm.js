@@ -15,6 +15,7 @@ export const eventEditor = (eventId) => {
                 <input type="date" id="editingEventDate" value="${eventToEdit.date}" /><br>
                 <input type="text" id="editingEventLocation"value="${eventToEdit.location}" /><br>
                 <button class="saveEditEvent" id="saveEditEvent--${eventId}">Save Changes</button>
+                <button class="cancelEdit" id="cancelEdit">Cancel</button>
         </section>
     `
 }
@@ -32,5 +33,14 @@ editTarget.addEventListener("click", (event) => {
         }
         modifyEvent(editedEvent)
         .then(postEvent)
+    }
+})
+
+// This button allows users to cancel edits and revert events to what was saved:
+const cancelTarget = document.querySelector("body")
+
+cancelTarget.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "cancelEdit") {
+        postEvent()
     }
 })

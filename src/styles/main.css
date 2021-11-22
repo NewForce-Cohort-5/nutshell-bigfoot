@@ -67,8 +67,10 @@
     border: 1px solid blue;
     background-color: mediumseagreen;
 }
-
-
+.cancelEdit {
+    border: 1px solid blue;
+    background-color: mediumseagreen;
+}
 .eventDel {
     border: 1px solid blue;
     background-color: mediumseagreen;

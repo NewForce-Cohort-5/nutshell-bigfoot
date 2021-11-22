@@ -18,5 +18,3 @@ export const postEvent = () => {
         }).join("")
     })
 }
-
-// Write if else for bold first card
