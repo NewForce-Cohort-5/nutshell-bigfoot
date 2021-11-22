@@ -42,14 +42,4 @@ import { taskList } from "./TaskList.js";
         }
     })
 
-    // function deleteCheckBox(){
-    //     if (document.getElementById('checkboxid').checked){
-    //           var answer = confirm('Are you sure you want to delete this checkbox?');
-    //            if (answer)
-    //              {
-    //              $("#checkboxid").remove();
-    //              }
-    //            }else{
-    //              alert("Pls check the checkbox.");
-    //             }
-    //   }
+  

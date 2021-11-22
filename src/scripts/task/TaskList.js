@@ -14,17 +14,18 @@ export const taskList = () => {
 
     let taskHTML = "";
 
-    allTheTask.forEach((singleTask) => {
+    allTheTask.filter( singleTask => singleTask.isCompleted === false).forEach((singleTask) => {
         taskHTML += task(singleTask)
-    });
 
+    });
+    
     
 
       contentTarget.innerHTML = `
-    
-
+     <br>
+    <button id="addTaskButton"> Add Task </button>
     <h3>Task List</h3>
-     <button id="addTaskButton"> Add Task </button>
+    
       ${taskHTML}
       `
         
@@ -34,9 +35,12 @@ export const taskList = () => {
 
 
 
-document.querySelector("#taskAll").addEventListener("click", () => {
-    
+
+document.querySelector("#taskAll").addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "addTaskButton")
+
     taskForm()
     
 })
+
 

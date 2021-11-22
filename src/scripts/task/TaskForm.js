@@ -21,6 +21,7 @@ document.querySelector("body").addEventListener("click",clickEvent =>{
             task: document.querySelector("#task-text").value,
             completionDate: document.querySelector("#completion-date").value,
             userId: parseInt(userId),
+            completed: false
            
         }
 

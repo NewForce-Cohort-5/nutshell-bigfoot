@@ -6,11 +6,12 @@ import { taskEditForm } from "./TaskEditForm.js"
 
 export const task = (taskObj) => {
     return  `
+    <section id="taskCard">
       <p> Task: <label for="task${taskObj.id}">${taskObj.task}</label> </p>
       <p> Complete by: ${taskObj.completionDate} </p>
-      <p> Complete: <input type="checkbox">
         <button id="editTask--${taskObj.id}">Edit</button>
-        
+        <input class="completeTask" type="checkbox" placeholder="completed" id="completeNote--${task.id}">
+    </section>
     `
 }
 
@@ -21,3 +22,5 @@ eventHub.addEventListener("click", (eventObject) => {
     taskEditForm(taskId);
     }
 })
+
+
