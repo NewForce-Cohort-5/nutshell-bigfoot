@@ -2,13 +2,14 @@ import { getTasks, useTask } from "./TaskDataProvider.js";
 import { task } from "./TaskCard.js";
 import { taskForm } from "./TaskForm.js";
 
+
 const contentTarget = document.querySelector("#taskContainer")
-debugger
+
 export const taskList = () => {
     getTasks()
     .then(() => {
 
-    
+     
     let allTheTask = useTask();
 
     let taskHTML = "";
@@ -20,8 +21,10 @@ export const taskList = () => {
     
 
       contentTarget.innerHTML = `
-      
+    
+
     <h3>Task List</h3>
+     <button id="addTaskButton"> Add Task </button>
       ${taskHTML}
       `
         
@@ -29,4 +32,11 @@ export const taskList = () => {
 }
 
 
- 
+
+
+document.querySelector("#taskAll").addEventListener("click", () => {
+    
+    taskForm()
+    
+})
+
