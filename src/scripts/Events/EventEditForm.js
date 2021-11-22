@@ -14,7 +14,7 @@ export const eventEditor = (eventId) => {
                 <input type="text" id="editingEventName" value="${eventToEdit.event}" /><br>
                 <input type="date" id="editingEventDate" value="${eventToEdit.date}" /><br>
                 <input type="text" id="editingEventLocation"value="${eventToEdit.location}" /><br>
-                <button id="saveEditEvent--${eventId}">Save Changes</button>
+                <button class="saveEditEvent" id="saveEditEvent--${eventId}">Save Changes</button>
         </section>
     `
 }

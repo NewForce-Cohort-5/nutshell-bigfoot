@@ -5,12 +5,25 @@ import { postEvent } from "./EventList.js"
 // This builds how the Event information will display on the page:
 export const Event = (event) => {
     return `
-    <div id="eventCard">
+    <div class="eventCard" id="eventCard">
         ${event.event}<br>
         ${event.date}<br>
         ${event.location}<br>
         <button class="eventEdit" id="eventEdit--${event.id}">Edit</button>
         <button class="eventDel" id="deleteEvent--${event.id}">Delete</button>
+        </div>
+    `
+}
+
+// This card is for the first listed Event, which should be bold, with larger text:
+export const EventBold = (event) => {
+    return `
+    <div class="eventCardBold" id="eventCardBold">
+        ${event.event}<br>
+        ${event.date}<br>
+        ${event.location}<br>
+        <button class="eventEdit" id="eventEditBold--${event.id}">Edit</button>
+        <button class="eventDel" id="deleteEventBold--${event.id}">Delete</button>
     `
 }
 

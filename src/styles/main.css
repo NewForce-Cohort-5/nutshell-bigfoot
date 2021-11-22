@@ -1,56 +1,83 @@
-.dark-background{
-    background-color: darkslategrey;
-    color: lightskyblue;
+.dark-background {
+    background-color: #012120;
+    color: lightgrey;
 }
 /* Event CSS section (to be filled in as needed) */
 /* Event Card */
-#eventCard {
-    border: 1px solid lime;
+
+#eventFormContainer {
+    border: 1px solid blue;
+    width: 250px;
 }
-#eventEdit-- {
-    border: 1px solid lime;
+#eventContainer {
+    display: flex;
+    flex-flow: column;
+    width: 250px;
+    max-height: 300px;
+    overflow-y: scroll;
+
 }
-#deleteEvent-- {
-    border: 1px solid lime;
+.eventCard {
+    display: flex;
+    flex-flow: column;
+    width: 225px;
+    max-height: fit-content;
+}
+.eventCard:first-child {
+    border: 1px solid red;
+    font-weight: bolder;
+    font-size: large;
+    background-color: #021212;
+    color: wheat;
 }
 /* New Event Form */
-#eventSection {
-    border: 1px solid lime;
-}
-#eventName {
-    border: 1px solid lime;
-}
-#eventDate {
-    border: 1px solid lime;
-}
-#eventLocation {
-    border: 1px solid lime;
-}
+/* .eventForm {} */
+/* #eventName {} */
+/* #eventDate {} */
+/* #eventLocation {} */
 #eventNameField {
-    border: 1px solid lime;
+    border: 1px solid white;
+    background: black;
+    color: whitesmoke;
 }
 #eventDateField {
-    border: 1px solid lime;
+    border: 1px solid white;
+    background: black;
+    color: whitesmoke;
 }
 #eventLocationField {
-    border: 1px solid lime;
+    border: 1px solid white;
+    background: black;
+    color: whitesmoke;
 }
-#saveEvent {
-    border: 1px solid lime;
-}
+
 /* Event Editor */
-#editingEvent {
-    border: 1px solid lime;
-}
+/* #editingEvent {} */
 #editingEventName {
-    border: 1px solid lime;
+    border: 1px solid white;
 }
 #editingEventDate {
-    border: 1px solid lime;
+    border: 1px solid white;
 }
 #editingEventLocation {
-    border: 1px solid lime;
+    border: 1px solid white;
 }
-#saveEditEvent {
-    border: 1px solid lime;
+/* Event Buttons */
+.eventEdit {
+    border: 1px solid blue;
+    background-color: mediumseagreen;
+}
+
+
+.eventDel {
+    border: 1px solid blue;
+    background-color: mediumseagreen;
+}
+#saveEvent {
+    border: 1px solid blue;
+    background-color: mediumseagreen;
+}
+.saveEditEvent {
+    border: 1px solid blue;
+    background-color: mediumseagreen;
 }

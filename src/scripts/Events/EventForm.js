@@ -2,7 +2,7 @@ import { postEvent } from "./EventList.js"
 import { saveEvent } from "./EventDataProvider.js"
 
 
-const contentTarget = document.querySelector(".dashboard")
+const contentTarget = document.querySelector(".eventFormContainer")
 
 // This is the form for entering in a new Event:
 export const eventForm = () => {
@@ -39,7 +39,7 @@ contentTarget.addEventListener("click", clickEvent => {
     }
     document.querySelector("#eventNameField").value = ""
     document.querySelector("#eventDateField").value = ""
-    document.querySelector("#eventLocationField").value = 0
+    document.querySelector("#eventLocationField").value = ""
 
     saveEvent(newEvent)
     .then(postEvent)
