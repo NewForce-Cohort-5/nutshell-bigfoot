@@ -40,5 +40,6 @@ export const updateChat = entry => {
         },
         body: JSON.stringify(entry)
     })
+    .then(getChat)
 }
 

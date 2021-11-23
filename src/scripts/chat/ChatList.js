@@ -16,7 +16,10 @@ export const ChatList = () => {
 
         document.querySelector("#chat-container").innerHTML = `
         
+        <h2 id="chat-header">Chat</h2>
         ${chatHTML}
+
+
         `
     })
 }

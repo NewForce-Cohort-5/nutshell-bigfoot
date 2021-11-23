@@ -1,11 +1,11 @@
 import { ChatList } from "./ChatList.js";
 import { getChat, saveChat } from "./ChatDataProvider.js";
 
-const contentTarget = document.querySelector("#chat-bar")
 
 
 
 export const ChatForm = () => {
+    const contentTarget = document.querySelector("#chat-bar")
 
     contentTarget.innerHTML = `
 
@@ -17,6 +17,7 @@ export const ChatForm = () => {
        
 
     </fieldset>
+
     <button type="button" class="btn btn-primary" id="send-button">Send</button>
 
 
@@ -33,7 +34,7 @@ document.querySelector("body").addEventListener("click", clickEvent => {
         date: new Date().toLocaleString(),
         userId: parseInt(userId)
     }
-   
+    document.querySelector("#chatbox").value = "";
     saveChat(newMessage)
     .then(ChatList)
 }

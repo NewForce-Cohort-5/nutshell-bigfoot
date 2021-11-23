@@ -1,14 +1,7 @@
 import { LoginForm } from "./auth/LoginForm.js"
 import { RegisterForm } from "./auth/RegisterForm.js"
 import { Nutshell } from "./Nutshell.js"
-import { ChatList} from "./chat/ChatList.js"
-import { ChatForm } from "./chat/ChatForm.js"
 
-
-
-
-ChatForm()
-ChatList() 
 
 /*
 
@@ -29,16 +22,16 @@ if(!activeUser){
     Nutshell()
 }
 
-// let chatWindow = document.getElementById('scrollbar-content'); 
+// let chatWindow = document.getElementById('chat-container'); 
 // var xH = chatWindow.scrollHeight; 
 // chatWindow.scrollTo(0, xH);
 
 
 //Auto Leap to bottom of chat
-const messagesContent = document.getElementById('scrollbar-content');
+const messagesContent = document.getElementById('chat-container');
 
 function appendMessage() {
-	const messagesContent = document.getElementsByClassName('scrollbar-content')[0];
+	const messagesContent = document.getElementsByClassName('chat-container')[0];
     // messagesContent.appendChild(message)
 }
 

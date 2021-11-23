@@ -15,8 +15,11 @@ eventHub.addEventListener("click", (eventObject) => {
 
         // clear the DOM
         document.querySelector(".dashboard").innerHTML = ""
+        // document.querySelector("#chat-bar").innerHTML = ""
+        // clear each container individually
 
         // Reprint the login and register form
+        location.reload()
         LoginForm()
         RegisterForm()
     }

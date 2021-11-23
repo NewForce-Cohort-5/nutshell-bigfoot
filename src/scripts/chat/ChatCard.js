@@ -13,20 +13,24 @@ export const Messages = (chat) => {
 
     return `
     
-    <div id="userId">${chat.userId}<div>
+    <div id="userId">User ${chat.userId}<div>
     
     <div class="chatbox">${chat.message}</div>
     
     <div class="chat-date">${chat.date}</div>
 
+    <div id="buttons">
     <button type="button" class="btn btn-default" id="edit--${chat.id}">Edit</button>
     <button type="button" class="btn btn-danger" id="deleteEntry--${chat.id}">Delete</button>
+    </div>
     `
 }
 
 const eventHub = document.querySelector("body")
 eventHub.addEventListener("click", (eventObject) => {
     if (eventObject.target.id.startsWith("edit--")) {
+
+
         const messageId = +eventObject.target.id.split("--")[1]
         console.log(messageId)
         ChatEditForm(messageId);
