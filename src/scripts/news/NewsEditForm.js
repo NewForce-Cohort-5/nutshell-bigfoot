@@ -30,9 +30,10 @@ export const NewsEditForm = (articleId) => {
 }
 
 
- const contentTarget = document.querySelector("#newsEditContainer")
+ const contentTarget = document.querySelector("body")
 
 contentTarget.addEventListener("click", (event) => {
+    
  if(event.target.id.startsWith("saveArticleChanges")){ 
  
      
@@ -43,6 +44,8 @@ contentTarget.addEventListener("click", (event) => {
             title: document.querySelector("#newsEditArticle").value, 
             synopsis: document.querySelector("#newsEditSynopsis").value,  
             url: document.querySelector("#newsEditUrl").value,
+            dateNow:  +document.querySelector("#newsDate").value,
+            userId: +document.querySelector("#newsUserId").value,
             
            
             // dateNow: Date.now()  - use hidden div above - look for example code.
@@ -50,7 +53,7 @@ contentTarget.addEventListener("click", (event) => {
         } // these ids come from the form for where we edit the note so it can save it
             console.log(editedArticle)
         // Send to json-server and refresh the list
-    contentTarget.innerHTML=""
+        document.querySelector("#newsEditContainer").innerHTML=""
           //
         
         updateNews(editedArticle)//this updates the edited note

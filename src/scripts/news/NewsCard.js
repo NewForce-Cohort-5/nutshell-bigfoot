@@ -19,7 +19,7 @@ export const News = (newsObject) => {
     <div id="newsSynopsis"><strong>Synopsis: </strong> ${newsObject.synopsis} </div>
 
     <div id="newsId"><strong>Article Id:</strong> ${newsObject.id}</div> 
-
+    <div style="visibility:hidden" id="newsUserID">${newsObject.userId}</div>
     <button id="deleteNote--${newsObject.id}">Delete</button>
     <button id="edit--${newsObject.id}">Edit</button>
 </section>

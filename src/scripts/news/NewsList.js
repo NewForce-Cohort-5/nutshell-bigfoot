@@ -33,21 +33,25 @@ export const newsList = () => {
   getNews()
   .then(() => {
       let allTheNews = useNews()
-      let userIdLogin = sessionStorage.getItem('activeUser')
+      let userIdLogin = +sessionStorage.getItem('activeUser')
       let newsHTML = "";
-     {
-       allTheNews = allTheNews.filter(singleUserinloop => {
-         return singleUserinloop.userId === userIdLogin
+       allTheNews = allTheNews.filter(singleArticleinloop => {
+       
+         return singleArticleinloop.userId === userIdLogin
        })
-     }
+       
+   
 //sort the array before you print 
 const sortedNews = allTheNews.sort((a, b) => b.dateNow - a.dateNow)
 //   console.log(sortedNews)
 
       allTheNews.forEach((singleArticle)=>{
+      
  
         newsHTML += News(singleArticle)
       });
+    
+      
       document.querySelector("#newsContainer").innerHTML = `${newsHTML}`
   })
   
