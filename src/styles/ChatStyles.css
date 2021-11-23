@@ -1,0 +1,43 @@
+
+#chat-bar {
+    background-color: orange;
+    width: 500px;
+}
+
+
+#chatbox {
+    border-style: solid black
+      
+}
+
+#chatbox.form.control {
+    width: 500px
+}
+
+#scrollbar-content {
+    margin:4px, 4px;
+    /* background-color: skyblue; */
+    padding:4px;
+    width: 500px;
+    height: 500px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+    
+}
+
+.chatbox, .chat-date {
+    border-color: rgb(10, 10, 10);
+    background-color: skyblue;
+    padding: 0.5em;
+  }
+
+  .chatbox {
+    font-weight: bold
+  }
+
+  #chat-container {
+      background-color: rgb(0, 0, 0);
+
+  }
+
