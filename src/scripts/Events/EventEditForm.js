@@ -38,8 +38,7 @@ editTarget.addEventListener("click", (event) => {
 
 // This button allows users to cancel edits and revert events to what was saved:
 const cancelTarget = document.querySelector("body")
-
-cancelTarget.addEventListener("click", clickEvent => {
+    cancelTarget.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "cancelEdit") {
         postEvent()
     }

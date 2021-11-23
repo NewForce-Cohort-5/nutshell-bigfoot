@@ -2,6 +2,14 @@
     background-color: #012120;
     color: lightgrey;
 }
+#darkMode {
+    border: 1px solid blue;
+    background-color: mediumseagreen;
+}
+#logout-button {
+    border: 1px solid blue;
+    background-color: mediumseagreen;
+}
 /* Event CSS section (to be filled in as needed) */
 /* Event Card */
 

@@ -2,19 +2,19 @@ import { getEvents, useEvents } from "./EventDataProvider.js"
 import { Event } from "./EventCard.js"
 
 export const postEvent = () => {
-    const eventTarget = document.querySelector(".eventContainer")
 
-// This code populates the events array for the page:
-    getEvents()
-    .then(() => {
-        const eventArray = useEvents()
-
-// This portion of the code sorts by date:
-        const sortedEvent = eventArray.sort((a, b) => {
-            return new Date (a.date) - new Date (b.date)
-            })
-        eventTarget.innerHTML = sortedEvent.map(singleEvent => {
-            return Event(singleEvent)
-        }).join("")
+getEvents()
+.then(() => {
+    let allEvents = useEvents()
+    let loggedUser = +sessionStorage.getItem('activeUser')
+    let eventHTML = ""
+    allEvents = allEvents.filter(singleLoopedEvent => {
+        return singleLoopedEvent.userId === loggedUser
     })
+    const sortedEvent = allEvents.sort((a, b) => new Date (a.date) - new Date (b.date))
+    allEvents.forEach((singleEvent) => {
+        eventHTML += Event(singleEvent)
+    })
+    document.querySelector("#eventContainer").innerHTML = `${eventHTML}`
+})
 }

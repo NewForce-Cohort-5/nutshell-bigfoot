@@ -1,11 +1,10 @@
 import { postEvent } from "./EventList.js"
-import { saveEvent } from "./EventDataProvider.js"
+import { getEvents, saveEvent } from "./EventDataProvider.js"
 
-
-const contentTarget = document.querySelector(".eventFormContainer")
 
 // This is the form for entering in a new Event:
 export const eventForm = () => {
+    const contentTarget = document.querySelector("#eventFormContainer")
     contentTarget.innerHTML = `
     <section class="eventForm" id="eventSection">
     <h2>Enter an Event Here</h2>
@@ -24,9 +23,13 @@ export const eventForm = () => {
         <button id="saveEvent">Save</button>
     `
 }
+
+let userId = sessionStorage.getItem('activeUser')
+
 // This is the Save button for New Events:
-contentTarget.addEventListener("click", clickEvent => {
+document.querySelector("body").addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveEvent") {
+        let userId = sessionStorage.getItem('activeUser')
         const eventName = document.querySelector("#eventNameField")
         const eventDate = document.querySelector("#eventDateField")
         const eventLocation = document.querySelector("#eventLocationField")
@@ -35,7 +38,8 @@ contentTarget.addEventListener("click", clickEvent => {
     const newEvent = {
         event: eventName.value,
         date: eventDate.value,
-        location: eventLocation.value
+        location: eventLocation.value,
+        userId: parseInt(userId)
     }
     document.querySelector("#eventNameField").value = ""
     document.querySelector("#eventDateField").value = ""

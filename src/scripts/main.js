@@ -28,9 +28,9 @@ if(!activeUser){
     RegisterForm()
 } else {
     Nutshell()
+
 }
 
-// This calls the event form to the page:
-eventForm()
+
 
 
