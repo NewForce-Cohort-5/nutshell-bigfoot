@@ -30,10 +30,10 @@ if(!activeUser){
 //Auto Leap to bottom of chat
 const messagesContent = document.getElementById('chat-container');
 
-function appendMessage() {
-	const messagesContent = document.getElementsByClassName('chat-container')[0];
-    // messagesContent.appendChild(message)
-}
+// function appendMessage() {
+// 	const messagesContent = document.getElementsByClassName('chat-container')[0];
+//     // messagesContent.appendChild(message)
+// }
 
 function getMessages() {
 	// Prior to getting your messages.
