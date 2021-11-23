@@ -3,10 +3,12 @@ import { task } from "./TaskCard.js";
 import { taskForm } from "./TaskForm.js";
 
 
-const contentTarget = document.querySelector("#taskContainer")
 
 export const taskList = () => {
+    const contentTarget = document.querySelector("#taskContainer")
+
     getTasks()
+    
     .then(() => {
 
      
@@ -37,7 +39,7 @@ export const taskList = () => {
 
 
 
-document.querySelector("#taskAll").addEventListener("click", clickEvent => {
+document.querySelector("body").addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "addTaskButton")
 
     taskForm()

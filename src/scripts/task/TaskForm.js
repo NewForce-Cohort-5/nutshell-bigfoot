@@ -7,7 +7,7 @@
 import { saveTask, patchTask } from "./TaskDataProvider.js";
 import { taskList } from "./TaskList.js";
 
-const contentTarget = document.querySelector("#taskFormContainer")
+
 
 
 
@@ -36,6 +36,7 @@ document.querySelector("body").addEventListener("click",clickEvent =>{
 })
 
 export const taskForm = () => {
+    const contentTarget = document.querySelector("#taskFormContainer")
    contentTarget.innerHTML = `
     <section id="addTaskForm"> 
     <fieldset>Task: <input type="textarea" id="task-text" placeholder="task goes here"> <br>

@@ -2,10 +2,10 @@ import { useTask, updateTask, getTasks } from "./TaskDataProvider.js";
 import { taskList } from "./TaskList.js";
 
 
-    const contentTarget = document.querySelector("#taskContainer")
+    
 
     export const taskEditForm = (taskId) => {
-    
+        const contentTarget = document.querySelector("#taskContainer")
     const allTask = useTask();
 
     const taskWeWantToEdit = allTask.find(singleTask => singleTask.id === taskId)
@@ -25,7 +25,7 @@ import { taskList } from "./TaskList.js";
 }
 
 
-    contentTarget.addEventListener("click", (event) => {
+  document.querySelector("body").addEventListener("click", (event) => {
         // debugger
         if(event.target.id.startsWith("saveTaskChanges-")) {
             // debugger
