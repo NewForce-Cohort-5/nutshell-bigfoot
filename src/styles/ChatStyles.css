@@ -1,11 +1,11 @@
 
-#chat-bar {
+#chatbox {
     background-color: orange;
     width: 500px;
 }
 
 
-#chatbox {
+#chat-container {
     border-style: solid black
       
 }
@@ -41,3 +41,5 @@
 
   }
 
+#userId {
+  background-color: 

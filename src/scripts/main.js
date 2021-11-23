@@ -48,7 +48,7 @@ function getMessages() {
   /*
    * Get your messages, we'll just simulate it by appending a new one syncronously.
    */
-  appendMessage();
+//   appendMessage();
   // After getting your messages.
   if (!shouldScroll) {
     scrollToBottom();

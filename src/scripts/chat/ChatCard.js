@@ -13,6 +13,8 @@ export const Messages = (chat) => {
 
     return `
     
+    <div id="userId">${chat.userId}<div>
+    
     <div class="chatbox">${chat.message}</div>
     
     <div class="chat-date">${chat.date}</div>

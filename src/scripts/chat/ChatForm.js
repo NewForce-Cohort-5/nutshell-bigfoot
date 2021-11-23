@@ -3,13 +3,13 @@ import { getChat, saveChat } from "./ChatDataProvider.js";
 
 const contentTarget = document.querySelector("#chat-bar")
 
-let userId = sessionStorage.getItem("activeUser")
+
 
 export const ChatForm = () => {
 
     contentTarget.innerHTML = `
 
-    <section id="chat-bar">
+  
 
     <fieldset>
 
@@ -19,20 +19,21 @@ export const ChatForm = () => {
     </fieldset>
     <button type="button" class="btn btn-primary" id="send-button">Send</button>
 
-</section>
+
     `
 }
 
 //Send event
-contentTarget.addEventListener("click", clickEvent => {
+document.querySelector("body").addEventListener("click", clickEvent => {
     if(clickEvent.target.id === "send-button") {
-
+    let userId = sessionStorage.getItem("activeUser")
+   
     const newMessage = {
         message: document.querySelector("#chatbox").value,
         date: new Date().toLocaleString(),
         userId: parseInt(userId)
     }
-
+   
     saveChat(newMessage)
     .then(ChatList)
 }
