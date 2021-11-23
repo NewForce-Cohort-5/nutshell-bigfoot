@@ -15,11 +15,12 @@ export const taskList = () => {
     let taskHTML = "";
 
     allTheTask.filter( singleTask => singleTask.isCompleted === false).forEach((singleTask) => {
+     
         taskHTML += task(singleTask)
 
     });
     
-    
+   
 
       contentTarget.innerHTML = `
      <br>

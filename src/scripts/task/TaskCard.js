@@ -10,7 +10,7 @@ export const task = (taskObj) => {
       <p> Task: <label for="task${taskObj.id}">${taskObj.task}</label> </p>
       <p> Complete by: ${taskObj.completionDate} </p>
         <button id="editTask--${taskObj.id}">Edit</button>
-        <input class="completeTask" type="checkbox" placeholder="completed" id="completeNote--${task.id}">
+        <input id="completeTask" type="checkbox" placeholder="completed" id="completeNote--${task.id}">
     </section>
     `
 }

@@ -30,10 +30,11 @@ import { taskList } from "./TaskList.js";
         if(event.target.id.startsWith("saveTaskChanges-")) {
             // debugger
             const editedTask = {
+                UserId:  +parseInt(event.target.id.split("-")[1]),
                 id: +parseInt(event.target.id.split("-")[1]),
                 task: document.querySelector("#task-text-edit").value,
                 completionDate: document.querySelector("#edit-date").value,
-                // complete: document.querySelector("#completeTask")
+                isCompleted: false
             }
 
             console.log(editedTask)

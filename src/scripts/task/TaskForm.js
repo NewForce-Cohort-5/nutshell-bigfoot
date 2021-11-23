@@ -21,7 +21,7 @@ document.querySelector("body").addEventListener("click",clickEvent =>{
             task: document.querySelector("#task-text").value,
             completionDate: document.querySelector("#completion-date").value,
             userId: parseInt(userId),
-            completed: false
+            isCompleted: false
            
         }
 
@@ -37,8 +37,20 @@ document.querySelector("body").addEventListener("click",clickEvent =>{
 
 export const taskForm = () => {
    contentTarget.innerHTML = `
-    <section> 
+    <section id="addTaskForm"> 
     <fieldset>Task: <input type="textarea" id="task-text" placeholder="task goes here"> <br>
     Task completion date: <input type="date" id="completion-date"> 
     <button id="saveTask">Save Note</button> </fieldset>`
 }
+
+
+const checkbox = document.querySelector("#completeTask");
+
+checkbox.addEventListener('click',() => {
+    if(this.checked) {
+    
+        
+        // Checkbox is checked..
+    } 
+});
+
