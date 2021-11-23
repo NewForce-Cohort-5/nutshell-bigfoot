@@ -4,7 +4,7 @@
 // "completionDate": "11/20/21",
 // "complete": false
 
-import { saveTask } from "./TaskDataProvider.js";
+import { saveTask, patchTask } from "./TaskDataProvider.js";
 import { taskList } from "./TaskList.js";
 
 const contentTarget = document.querySelector("#taskFormContainer")
@@ -44,13 +44,15 @@ export const taskForm = () => {
 }
 
 
-const checkbox = document.querySelector("#completeTask");
+const checkbox = document.querySelector("body");
 
-checkbox.addEventListener('click',() => {
-    if(this.checked) {
-    
-        
+checkbox.addEventListener('change',(event) => {
+    if(event.target.id.startsWith("completeTask-")) {
+//   console.log(event.target.id.split("--")[1])  
+        patchTask(event.target.id.split("--")[1])
+        .then(taskList)
         // Checkbox is checked..
     } 
 });
 
+ 

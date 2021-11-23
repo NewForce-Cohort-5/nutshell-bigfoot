@@ -33,3 +33,14 @@ export const updateTask = task => {
         body: JSON.stringify(task)
     })
 }
+
+export const patchTask = taskId => {
+
+    return fetch(`http://localhost:8088/Tasks/${taskId}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({isCompleted: true})
+    })
+}
