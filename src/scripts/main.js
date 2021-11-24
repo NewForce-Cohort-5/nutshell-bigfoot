@@ -3,6 +3,7 @@ import { RegisterForm } from "./auth/RegisterForm.js"
 import { eventForm } from "./Events/EventForm.js"
 import { postEvent } from "./Events/EventList.js"
 import { Nutshell } from "./Nutshell.js"
+import { taskForm } from "./task/TaskForm.js"
 
 // This makes a Darkmode button, it's just for fun:
 const darkModeButton = document.querySelector("#darkMode")
@@ -20,6 +21,9 @@ darkModeButton.addEventListener("click", function() {
     4. Also, if the user authenticates, and the login form is initially shown
         ensure that the Nutshell component gets rendered
 */
+
+
+// taskForm()
 
 const activeUser = sessionStorage.getItem("activeUser")
 
