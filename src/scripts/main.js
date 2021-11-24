@@ -3,6 +3,8 @@ import { RegisterForm } from "./auth/RegisterForm.js"
 import { eventForm } from "./Events/EventForm.js"
 import { postEvent } from "./Events/EventList.js"
 import { Nutshell } from "./Nutshell.js"
+import { NewsEditForm } from "./news/NewsEditForm.js"
+import { getNews } from "./news/NewsDataProvider.js"
 import { taskForm } from "./task/TaskForm.js"
 
 // This makes a Darkmode button, it's just for fun:
@@ -34,7 +36,4 @@ if(!activeUser){
     Nutshell()
 
 }
-
-
-
 
