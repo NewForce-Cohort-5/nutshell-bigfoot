@@ -1,6 +1,7 @@
 import {LogOutButton} from "./auth/LogoutButton.js"
 import { newsForm } from "./news/NewsForm.js"
 import { newsList } from "./news/NewsList.js"
+import { taskList } from "./task/TaskList.js"
 
 export const Nutshell = () => {
 
@@ -8,4 +9,7 @@ export const Nutshell = () => {
       // Render all your UI components here
       newsList()
       newsForm()
+        taskList()
 }
+    
+
