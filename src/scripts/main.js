@@ -17,6 +17,7 @@ darkModeButton.addEventListener("click", function() {
 })
 
 /*
+
     1. Check if the user is authenticated by looking in session storage for `activeUser`
     2. If so, render the Nutshell component
     3. If not, render the login and registration forms
@@ -35,5 +36,43 @@ if(!activeUser){
 } else {
     Nutshell()
 
+// let chatWindow = document.getElementById('chat-container'); 
+// var xH = chatWindow.scrollHeight; 
+// chatWindow.scrollTo(0, xH);
+
+
+//Auto Leap to bottom of chat
+const messagesContent = document.getElementById('chat-container');
+
+// function appendMessage() {
+// 	const messagesContent = document.getElementsByClassName('chat-container')[0];
+//     // messagesContent.appendChild(message)
+// }
+
+function getMessages() {
+	// Prior to getting your messages.
+  let shouldScroll = messagesContent.scrollTop + messagesContent.clientHeight === messagesContent.scrollHeight;
+  /*
+   * Get your messages, we'll just simulate it by appending a new one syncronously.
+   */
+//   appendMessage();
+  // After getting your messages.
+  if (!shouldScroll) {
+    scrollToBottom();
+//   } else {
+//         messagesContent.scrollTop = messagesContent.scrollHeight
+  }
+}
+
+function scrollToBottom() {
+    messagesContent.scrollTop = messagesContent.scrollHeight;
+}
+
+// scrollToBottom();
+
+setInterval(getMessages, 100);
+// newsList("userID")
+
+// NewsEditForm()
 }
 

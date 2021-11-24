@@ -1,0 +1,54 @@
+
+#chatbox {
+    background-color:  rgb(235, 221, 27);
+    width: 500px;
+}
+
+
+#chatbox.form.control {
+    width: 500px
+}
+
+#chat-container {
+    margin:4px, 4px;
+    padding:4px;
+    width: 500px;
+    height: 500px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+    
+   
+}
+
+.chatbox, .chat-date {
+    border-color: rgb(10, 10, 10);
+    background-color: skyblue;
+    padding: 0.5em;
+    color: black
+  }
+
+  .chatbox {
+    font-weight: bolder
+  }
+
+#userId {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+#buttons {
+    background-color: skyblue;
+}
+
+#chat-header {
+    font-weight: bold;
+    padding-left: 5em;
+    padding-right: 4em;
+    background-color: rgb(235, 221, 27);
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    color: black   
+}

@@ -1,4 +1,6 @@
 import {LogOutButton} from "./auth/LogoutButton.js"
+import { ChatList} from "./chat/ChatList.js"
+import { ChatForm } from "./chat/ChatForm.js"
 import { eventForm } from "./Events/EventForm.js"
 import { postEvent } from "./Events/EventList.js"
 import { newsForm } from "./news/NewsForm.js"
@@ -14,7 +16,12 @@ export const Nutshell = () => {
       postEvent()
       newsList()
       newsForm()
-      taskList()
+      ChatForm()
+      ChatList()
+    
 }
     
 
+     
+
+      
