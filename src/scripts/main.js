@@ -1,11 +1,20 @@
 import { LoginForm } from "./auth/LoginForm.js"
 import { RegisterForm } from "./auth/RegisterForm.js"
-
+import { eventForm } from "./Events/EventForm.js"
+import { postEvent } from "./Events/EventList.js"
 import { Nutshell } from "./Nutshell.js"
 import { NewsEditForm } from "./news/NewsEditForm.js"
 import { getNews } from "./news/NewsDataProvider.js"
 import { taskForm } from "./task/TaskForm.js"
 
+// This makes a Darkmode button, it's just for fun:
+const darkModeButton = document.querySelector("#darkMode")
+
+// This makes the Darkmode button work when the button is clicked:
+darkModeButton.addEventListener("click", function() {
+    const bodyElement = document.querySelector("body")
+    bodyElement.classList.toggle("dark-background")
+})
 
 /*
     1. Check if the user is authenticated by looking in session storage for `activeUser`
@@ -25,8 +34,6 @@ if(!activeUser){
     RegisterForm()
 } else {
     Nutshell()
+
 }
 
-// newsList("userID")
-
-// NewsEditForm()

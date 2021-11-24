@@ -1,3 +1,95 @@
+.dark-background {
+    background-color: #012120;
+    color: lightgrey;
+}
+#darkMode {
+    border: 1px solid blue;
+    background-color: mediumseagreen;
+}
+#logout-button {
+    border: 1px solid blue;
+    background-color: mediumseagreen;
+}
+/* Event CSS section (to be filled in as needed) */
+/* Event Card */
+
+#eventFormContainer {
+    border: 1px solid blue;
+    width: 250px;
+}
+#eventContainer {
+    display: flex;
+    flex-flow: column;
+    width: 250px;
+    max-height: 300px;
+    overflow-y: scroll;
+
+}
+.eventCard {
+    display: flex;
+    flex-flow: column;
+    width: 225px;
+    max-height: fit-content;
+}
+.eventCard:first-child {
+    border: 1px solid red;
+    font-weight: bolder;
+    font-size: large;
+    background-color: #021212;
+    color: wheat;
+}
+/* New Event Form */
+/* .eventForm {} */
+/* #eventName {} */
+/* #eventDate {} */
+/* #eventLocation {} */
+#eventNameField {
+    border: 1px solid white;
+    background: black;
+    color: whitesmoke;
+}
+#eventDateField {
+    border: 1px solid white;
+    background: black;
+    color: whitesmoke;
+}
+#eventLocationField {
+    border: 1px solid white;
+    background: black;
+    color: whitesmoke;
+}
+
+/* Event Editor */
+/* #editingEvent {} */
+#editingEventName {
+    border: 1px solid white;
+}
+#editingEventDate {
+    border: 1px solid white;
+}
+#editingEventLocation {
+    border: 1px solid white;
+}
+/* Event Buttons */
+.eventEdit {
+    border: 1px solid blue;
+    background-color: mediumseagreen;
+}
+.cancelEdit {
+    border: 1px solid blue;
+    background-color: mediumseagreen;
+}
+.eventDel {
+    border: 1px solid blue;
+    background-color: mediumseagreen;
+}
+#saveEvent {
+    border: 1px solid blue;
+    background-color: mediumseagreen;
+}
+.saveEditEvent {
+    border: 1px solid blue;
+    background-color: mediumseagreen;
 #taskContainer {
     display: flex;
     flex-direction: column;
