@@ -1,6 +1,9 @@
 import { LoginForm } from "./auth/LoginForm.js"
 import { RegisterForm } from "./auth/RegisterForm.js"
+
 import { Nutshell } from "./Nutshell.js"
+import { NewsEditForm } from "./news/NewsEditForm.js"
+import { getNews } from "./news/NewsDataProvider.js"
 import { taskForm } from "./task/TaskForm.js"
 
 
@@ -60,3 +63,6 @@ function scrollToBottom() {
 // scrollToBottom();
 
 setInterval(getMessages, 100);
+// newsList("userID")
+
+// NewsEditForm()
