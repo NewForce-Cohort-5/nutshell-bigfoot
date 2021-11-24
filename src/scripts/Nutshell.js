@@ -12,10 +12,11 @@ export const Nutshell = () => {
       newsList()
       newsForm()
         taskList()
+        ChatForm()
+        ChatList()
 }
     
 
-      ChatForm()
-      ChatList()
+     
 
       
